@@ -6,3 +6,5 @@
     b. typings install dt~node --save --global
 04. For bower
     bower install
+05. rxjs path and packages
+    node .\rxModuleBuilder.js
