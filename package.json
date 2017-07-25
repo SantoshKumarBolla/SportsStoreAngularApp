@@ -17,7 +17,8 @@
         "zone.js": "0.7.7",
         "core-js": "2.4.1",
         "classlist.js": "1.1.20150312",
-        "systemjs": "0.19.40"
+        "systemjs": "0.19.40",
+        "html5-history-api": "4.2.8"
     },
     "devDependencies": {
         "lite-server": "2.3.0",
