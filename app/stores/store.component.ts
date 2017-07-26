@@ -17,7 +17,8 @@ export class StoreComponent{
     public productsPerPage = 4;
     public selectedPage = 1;
 
-    constructor(private repository: ProductRepository, private cart: Cart, private router: Router){}
+    constructor(private repository: ProductRepository, private cart: Cart){}
+    // constructor(private repository: ProductRepository, private cart: Cart, private router: Router){}
 
     get products(): Product[] {
         let pageIndex = (this.selectedPage -1) * this.productsPerPage;
@@ -44,6 +45,6 @@ export class StoreComponent{
 
     addProductToCart(product: Product){
         this.cart.addLine(product);
-        this.router.navigateByUrl("/cart");
+        //this.router.navigateByUrl("/cart");
     }
 }

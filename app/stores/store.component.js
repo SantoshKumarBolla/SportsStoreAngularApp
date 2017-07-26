@@ -20,6 +20,7 @@ let StoreComponent = class StoreComponent {
         this.productsPerPage = 4;
         this.selectedPage = 1;
     }
+    // constructor(private repository: ProductRepository, private cart: Cart, private router: Router){}
     get products() {
         let pageIndex = (this.selectedPage - 1) * this.productsPerPage;
         return this.repository.getProducts(this.selectedCategory).splice(pageIndex, this.productsPerPage);
@@ -38,7 +39,7 @@ let StoreComponent = class StoreComponent {
     }
     addProductToCart(product) {
         this.cart.addLine(product);
-        //
+        //this.router.navigateByUrl("/cart");
     }
 };
 StoreComponent = __decorate([
