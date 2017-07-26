@@ -40,3 +40,16 @@ devDependencies
 		This package allows multiple commands to be run by npm at the same time.
 		See the “Starting the Watch Processes” section for details.
 }
+The @NgModule Decorator Root Module Properties
+	imports
+		This property specifies the Angular modules that are required to support the
+		directives, components, and pipes in the application.
+	declarations
+		This property is used to specify the directives, components, and pipes that are used in
+		the application.
+	providers
+		This property defines the service providers that will be used by the module’s injector.
+		These are the providers that will be available throughout the application and used
+		when no local provider for a service is available.
+	bootstrap
+		This property specifies the root components for the application.

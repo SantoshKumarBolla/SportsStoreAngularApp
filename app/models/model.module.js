@@ -9,11 +9,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 const product_respository_1 = require("./product.respository");
 const static_datasource_1 = require("./static.datasource");
+const cart_model_1 = require("./cart.model");
 let ModelModule = class ModelModule {
 };
 ModelModule = __decorate([
     core_1.NgModule({
-        providers: [product_respository_1.ProductRepository, static_datasource_1.StaticDatasource]
+        providers: [product_respository_1.ProductRepository, static_datasource_1.StaticDatasource, cart_model_1.Cart]
     })
 ], ModelModule);
 exports.ModelModule = ModelModule;

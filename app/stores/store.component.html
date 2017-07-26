@@ -1,7 +1,7 @@
 <div class="navbar navbar-inverse bg-inverse">
     <div>
         <a class="navbar-brand text-white">Sports Store</a>
-        <span>Cart will come here...</span>
+        <cart-summary></cart-summary>
     </div>
 </div>
 
@@ -22,7 +22,7 @@
             </h4>
             <div class="card-text p-1">
                 {{prod.description}}
-                <button class="btn btn-success btn-sm pull-right">Add To Cart</button>
+                <button class="btn btn-success btn-sm pull-right" (click)="addProductToCart(prod)">Add To Cart</button>
             </div>
         </div>
     </div>
