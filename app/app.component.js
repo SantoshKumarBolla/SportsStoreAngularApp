@@ -12,7 +12,8 @@ let AppComponent = class AppComponent {
 AppComponent = __decorate([
     core_1.Component({
         selector: "app",
-        template: `<div class="bg-warning">Sports Store will come here....</div>`
+        template: "<stores></stores>"
+        // template: `<div class="bg-warning">Sports Store will come here....</div>`
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

@@ -11,5 +11,15 @@ import { ProductRepository } from "../models/product.respository";
 )
 
 export class StoreComponent{
-    
+    public selectedCategory = null;
+
+    constructor(private repository: ProductRepository){
+
+    }
+
+    get products(): Product[] {
+        return this.repository.getProducts();
+    }
+
+    get categories(): string[] { return this.repository.getCategories(); }
 }
