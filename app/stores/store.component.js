@@ -15,11 +15,25 @@ let StoreComponent = class StoreComponent {
     constructor(repository) {
         this.repository = repository;
         this.selectedCategory = null;
+        this.productsPerPage = 4;
+        this.selectedPage = 1;
     }
     get products() {
-        return this.repository.getProducts();
+        let pageIndex = (this.selectedPage - 1) * this.productsPerPage;
+        return this.repository.getProducts(this.selectedCategory).splice(pageIndex, this.productsPerPage);
+        // return this.repository.getProducts(this.selectedCategory).splice(pageIndex, pageIndex + this.productsPerPage);
+        //return this.repository.getProducts();
     }
     get categories() { return this.repository.getCategories(); }
+    changeCategory(newCategory) { this.selectedCategory = newCategory; }
+    changePage(newPage) { this.selectedPage = newPage; }
+    changePageSize(newSize) {
+        this.productsPerPage = Number(newSize);
+        this.changePage(1);
+    }
+    get pageCount() {
+        return Math.ceil(this.repository.getProducts(this.selectedCategory).length / this.productsPerPage);
+    }
 };
 StoreComponent = __decorate([
     core_1.Component({
